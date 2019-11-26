@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  node:
+    image: node:10.17.0-alpine
+    container_name: htboil
+    ports:
+     - 3000:3000
+    volumes:
+     - .:/web
+    working_dir: /web
+    tty: true
+    
