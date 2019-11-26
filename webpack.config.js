@@ -25,24 +25,23 @@ module.exports = {
           'html-loader',
           'ejs-html-loader'
         ],
-      },/*
+      },
       {
-        test: /\.(c|sc)ss$/,
+        test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
         ]
-      }*/
+      }
     ]
   },
-  plugins: [
+  plugins: [/*
     new CopyPlugin([
       { from: './src/css', to: 'css' }
-    ]),
+    ]),*/
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-      chunkFilename: 'css/[id].css',
+      filename: 'css/style.css',
     })
   ].concat(htmlPlugins)
   .concat([
